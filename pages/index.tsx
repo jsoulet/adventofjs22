@@ -1,6 +1,65 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import styled from 'styled-components'
+import Link from 'next/link'
+
+const H1 = styled.h1(() => null)
+
+
+const CardTitle = styled.h2``
+const CardDetails = styled.p``
+
+interface DayCardProps{
+  title: string,
+  details: string,
+  href: string,
+}
+
+const CardRoot = styled(Link)`
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+  &:hover,
+  &:focus,
+  &:active {
+    color: #0070f3;
+    border-color: #0070f3;
+  }
+  ${CardTitle} {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+  }
+  ${CardDetails} {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+`
+
+
+const DayCard: React.FC<DayCardProps> = ({title, details, ...props}) => {
+  return <CardRoot {...props}>
+    <>
+      <CardTitle>{title} &rarr;</CardTitle>
+      <CardDetails>{details}</CardDetails>
+    </>
+  </CardRoot>
+}
+
+
+const challenges = [
+  {
+    name: 'Pomodoro',
+    url: '1-pomodoro'
+  }
+]
 
 export default function Home() {
   return (
@@ -12,45 +71,27 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <H1 className={styles.title}>
+          Advent of JS 2022
+        </H1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
+          Challenges from <a href="https://www.adventofjs.com/">Advent of JavaScript</a>
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          {challenges.map((challenge, index) => {
+            const date = (new Date(`2022-12-${index+1}`)).toLocaleDateString('en-GB', {
+              year: 'numeric', month: 'long', day: 'numeric'
+            })
+            
+            return <DayCard 
+              key={index}
+              title={date}
+              details={challenge.name}
+              href={`challenges/${challenge.url}`}
+            />
+          })}
         </div>
       </main>
 
