@@ -45,16 +45,11 @@ const Grid = styled.div`
   }
 `
 
-export default function Home() {
-  const [challenges, setChallenges] = useState<ChallengeMeta[]>([])
-  useEffect(() => {
-    const fetchChallenges = async () => {
-      const response = await fetch('/api/challenges')
-      const data = await response.json()
-      setChallenges(data)
-    }
-    fetchChallenges()
-  }, [])
+interface Props {
+  challenges: ChallengeMeta[]
+}
+
+export default function Home({ challenges }: Props) {
   return (
     <Container>
       <Main>
@@ -85,4 +80,34 @@ export default function Home() {
       </Main>
     </Container>
   )
+}
+
+export async function getStaticProps() {
+  const challenges = [
+    {
+      name: 'Pomodoro',
+      slug: '1-pomodoro'
+    },
+    {
+      name: 'Ecommerce Component',
+      slug: '2-ecommerce'
+    },
+    {
+      name: 'Keyboard',
+      slug: '3-keyboard'
+    },{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},
+  ]
+  const enrichedData = challenges.map((challenge, index) => {
+    const day = (index + 1).toLocaleString('en-GB', {minimumIntegerDigits: 2})
+    return {
+      ...challenge,
+      date: `2022-12-${day}`
+    }
+  })
+  
+  return {
+    props: {
+      challenges: enrichedData,
+    },
+  }
 }

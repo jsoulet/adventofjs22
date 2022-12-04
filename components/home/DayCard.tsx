@@ -82,6 +82,9 @@ const CardRoot = styled(Link)<{ disabled: boolean}>`
           color: #B0BAC4;
           border-color: #B0BAC4;
         }
+        ${CardDetails} {
+          display: none;
+        }
       `
   }}
 `
