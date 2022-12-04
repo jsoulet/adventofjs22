@@ -18,9 +18,10 @@ export default function handler(
   res: NextApiResponse<ChallengeMeta[]>
 ) {
   const response = challenges.map((challenge, index) => {
+    const day = (index + 1).toLocaleString('en-GB', {minimumIntegerDigits: 2})
     return {
       ...challenge,
-      date: `2022-12-${index + 1}`
+      date: `2022-12-${day}`
     }
   })
   res.status(200).json(response)
