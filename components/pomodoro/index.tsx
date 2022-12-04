@@ -16,12 +16,13 @@ const Wrapper = styled.div`
 const Ring = styled.div<{isEnding: boolean}>`
     position: absolute;
     left: 0;
-    stroke: #09A65A;
+    stroke: #900A0A;
     top: 0;
     z-index: 1;
     ${(props) => props.isEnding ? css`
       & circle {
-        stroke: #900A0A
+        stroke: #09A65A;
+        
       }
     `: ''}   
 `
