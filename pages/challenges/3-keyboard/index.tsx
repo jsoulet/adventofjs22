@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Keyboard from "../../../components/keyboard";
 
 const Page = styled.main`
+  background: #37B2C3;
   align-items: center;
   display: flex;
   justify-content: center;
