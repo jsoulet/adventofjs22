@@ -42,7 +42,7 @@ const CardRoot = styled(Link)<{ disabled: boolean}>`
   color: inherit;
   text-decoration: none;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  min-height: 150px;
   position: relative;
   ${CardTitle}, ${CardDetails} {
     position: absolute;
