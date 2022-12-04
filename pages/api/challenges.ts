@@ -7,7 +7,11 @@ const challenges = [
     name: 'Pomodoro',
     slug: '1-pomodoro'
   },
-  {},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},
+  {},
+  {
+    name: 'Keyboard',
+    slug: '3-keyboard'
+  },{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},
 ]
 
 const responseData: any[] = []

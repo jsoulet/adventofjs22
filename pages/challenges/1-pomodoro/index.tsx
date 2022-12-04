@@ -1,5 +1,5 @@
 import Head from "next/head"
-import styled, {createGlobalStyle} from "styled-components"
+import styled from "styled-components"
 import Pomodoro from "../../../components/pomodoro"
 
 
