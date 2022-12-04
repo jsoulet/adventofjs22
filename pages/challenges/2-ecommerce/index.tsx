@@ -1,9 +1,8 @@
-import Head from "next/head";
 import styled from 'styled-components'
 import Page from '../../../components/Page'
 import { Menu, Cart } from '../../../components/ecommerce'
 import { useState } from "react";
-import { OrderItem, MenuItem } from "../../../types/ecommerce";
+import { OrderItem } from "../../../types/ecommerce";
 
 const StyledPage = styled(Page)`
   background: url('/images/ecommerce/bg__left.svg') left 10% no-repeat,
@@ -125,10 +124,8 @@ const EcommercePage = () => {
     )
   }
   return <StyledPage title="Keyboard">
-    <>
-      <Menu menuItems={menuItems} order={order} handleAddToCart={handleAddToCart}/>
-      <Cart menuItems={menuItems} order={order} handleIncrease={handleIncrease} handleDecrease={handleDecrease}/>
-    </>
+    <Menu menuItems={menuItems} order={order} handleAddToCart={handleAddToCart}/>
+    <Cart menuItems={menuItems} order={order} handleIncrease={handleIncrease} handleDecrease={handleDecrease}/>
   </StyledPage>
 }
 

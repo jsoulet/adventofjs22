@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const CardTitle = styled.h2`
   margin: 0 0 1rem 0;
-  font-size: 3.5rem;
+  font-size: 4rem;
   background: #2C6C73;
   width: 100%;
   height: 100%;
@@ -12,14 +12,15 @@ const CardTitle = styled.h2`
   justify-content: center;
   width: 100%;
   height: 100%;
-  
+  font-family: StrangeTales, serif;
   border: 1px solid #FFFEF9;
-  
+  font-weight: normal;
   border-radius: 10px;
 `
 const CardDetails = styled.p`
   font-size: 2rem;
   background: #D84150;
+  filter: brightness(85%);
   margin: 0;
   display: flex;
   align-items: center;
@@ -44,6 +45,7 @@ const CardRoot = styled(Link)<{ disabled: boolean}>`
   transition: color 0.15s ease, border-color 0.15s ease;
   min-height: 150px;
   position: relative;
+  
   ${CardTitle}, ${CardDetails} {
     position: absolute;
     top: 0;

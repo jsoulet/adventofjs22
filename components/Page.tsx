@@ -2,7 +2,8 @@ import Head from 'next/head'
 import styled from 'styled-components'
 
 interface Props {
-  title: string
+  title: string,
+  children: React.ReactNode
 }
 const Page = styled(({title, ...props}: Props) => {
   return <>
