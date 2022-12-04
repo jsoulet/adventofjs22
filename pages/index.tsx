@@ -13,6 +13,7 @@ const Description = styled.p`
   margin: 1rem 0 4rem;
   line-height: 1.5;
   font-size: 1.5rem;
+  text-align: center;
 `
 const Container = styled.div`
   padding: 0 2rem;
@@ -63,6 +64,11 @@ export default function Home() {
 
         <Description>
           Challenges from <a href="https://www.adventofjs.com/">Advent of JavaScript</a>
+          <br/>
+          Check code on <a href="https://www.adventofjs.com/">GitHub</a>
+        </Description>
+        <Description>
+          
         </Description>
 
         <Grid>

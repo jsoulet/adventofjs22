@@ -4,7 +4,7 @@ import Link from 'next/link'
 const CardTitle = styled.h2`
   margin: 0 0 1rem 0;
   font-size: 4rem;
-  background: #2C6C73;
+  background: #3e8daf;
   width: 100%;
   height: 100%;
   display: flex;
