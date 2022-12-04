@@ -67,7 +67,7 @@ export default function Home() {
 
         <Grid>
           {challenges.map((challenge, index) => {
-            const date = (new Date(challenge.date)).toLocaleDateString('en-GB', { day: 'numeric'})
+            const date = String((new Date(challenge.date)).getDate())
             return <DayCard 
               key={index}
               title={date}
