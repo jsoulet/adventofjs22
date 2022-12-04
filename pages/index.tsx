@@ -59,13 +59,9 @@ export default function Home({ challenges }: Props) {
 
         <Description>
           Challenges from <a href="https://www.adventofjs.com/">Advent of JavaScript</a>
-          <br/>
+          &nbsp;•&nbsp;
           Check code on <a href="https://www.adventofjs.com/">GitHub</a>
         </Description>
-        <Description>
-          
-        </Description>
-
         <Grid>
           {challenges.map((challenge, index) => {
             const date = String((new Date(challenge.date)).getDate())
