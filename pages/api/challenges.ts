@@ -7,7 +7,10 @@ const challenges = [
     name: 'Pomodoro',
     slug: '1-pomodoro'
   },
-  {},
+  {
+    name: 'Ecommerce Component',
+    slug: '2-ecommerce'
+  },
   {
     name: 'Keyboard',
     slug: '3-keyboard'

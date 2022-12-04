@@ -169,7 +169,7 @@ const Pomodoro = () => {
           cy={259}
           r={PROGESS_RADIUS}
           strokeDashoffset={strokeDashoffset}
-          stroke-dasharray="1596"
+          strokeDasharray="1596"
         />
       </svg>
     </Ring>

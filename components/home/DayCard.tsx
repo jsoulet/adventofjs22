@@ -38,7 +38,7 @@ interface DayCardProps{
 }
 
 const CardRoot = styled(Link)<{ disabled: boolean}>`
-  text-align: left;
+  text-align: center;
   color: inherit;
   text-decoration: none;
   transition: color 0.15s ease, border-color 0.15s ease;
