@@ -60,7 +60,7 @@ export default function Home({ challenges }: Props) {
         <Description>
           Challenges from <a href="https://www.adventofjs.com/">Advent of JavaScript</a>
           &nbsp;•&nbsp;
-          Check code on <a href="https://www.adventofjs.com/">GitHub</a>
+          Check code on <a href="https://github.com/jsoulet/adventofjs22">GitHub</a>
         </Description>
         <Grid>
           {challenges.map((challenge, index) => {
