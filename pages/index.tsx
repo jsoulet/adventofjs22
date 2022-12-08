@@ -91,7 +91,13 @@ export async function getStaticProps() {
     {
       name: 'Keyboard',
       slug: '3-keyboard'
-    },{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},
+    },
+    {},
+    {
+      name: 'Multi-select',
+      slug: '5-multiselect'
+    }
+    ,{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},
   ]
   const enrichedData = challenges.map((challenge, index) => {
     const day = (index + 1).toLocaleString('en-GB', {minimumIntegerDigits: 2})

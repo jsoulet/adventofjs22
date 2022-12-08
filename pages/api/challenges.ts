@@ -14,7 +14,10 @@ const challenges = [
   {
     name: 'Keyboard',
     slug: '3-keyboard'
-  },{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},
+  },{},{
+    name: 'Multi-select',
+    slug: '5-multiselect'
+  },{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},
 ]
 
 const responseData: any[] = []

@@ -1,4 +1,3 @@
-import Head from "next/head";
 import styled from 'styled-components'
 import Keyboard from "../../../components/keyboard";
 import Page from '../../../components/Page'
