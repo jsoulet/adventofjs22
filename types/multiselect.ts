@@ -5,5 +5,5 @@ export type Episode = {
 }
 
 export type EpisodeWithStatus  = Episode & {
-  checked: boolean
+  checked?: boolean
 }
