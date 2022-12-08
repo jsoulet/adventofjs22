@@ -85,7 +85,7 @@ export async function getStaticProps() {
       slug: '1-pomodoro'
     },
     {
-      name: 'Ecommerce Component',
+      name: 'E-commerce Component',
       slug: '2-ecommerce'
     },
     {
@@ -104,7 +104,14 @@ export async function getStaticProps() {
       name: 'Weather',
       slug: '8-weather'
     }, 
-    {},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},
+    {}, // 9
+    {}, // 10
+    {}, // 11
+    {
+      name: 'Rock, paper, scissors',
+      slug: '12-shifumi'
+    }, // 12
+    {},{},{},{},{},{},{},{},{},{},{},{},
   ]
   const enrichedData = challenges.map((challenge, index) => {
     const day = (index + 1).toLocaleString('en-GB', {minimumIntegerDigits: 2})

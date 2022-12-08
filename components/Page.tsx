@@ -5,9 +5,9 @@ interface Props {
   title: string,
   children: React.ReactNode
 }
-const Page = styled(({title, ...props}: Props) => {
+const StyledPage = styled(({title, ...props}: Props) => {
   return <>
-    {title && <Head>{title}</Head>}
+    <Head><title>{title}</title></Head>
     <main {...props}></main>
   </>
 })`
@@ -20,4 +20,8 @@ const Page = styled(({title, ...props}: Props) => {
   min-height: 100vh;
 `
 
-export default Page
+const Page = () => {
+  
+}
+
+export default StyledPage

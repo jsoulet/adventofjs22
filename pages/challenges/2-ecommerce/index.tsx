@@ -123,7 +123,7 @@ const EcommercePage = () => {
       .filter(orderItem => orderItem.count > 0)
     )
   }
-  return <StyledPage title="Keyboard">
+  return <StyledPage title="E-commerce component">
     <Menu menuItems={menuItems} order={order} handleAddToCart={handleAddToCart}/>
     <Cart menuItems={menuItems} order={order} handleIncrease={handleIncrease} handleDecrease={handleDecrease}/>
   </StyledPage>
